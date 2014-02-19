@@ -13,9 +13,11 @@ syn region wikidpadBold      start=/\*\S\@=/ skip=/\\\*/ end=/\S\@<=\*/ contains
 syn region wikidpadItalic    start=/_/ skip=/\\_/ end=/_/ contains=wikidpadBold,wikidpadEntity
 syn region wikidpadEntity    start=/&/ end=/;/
 syn match  wikidpadHeading   "^[+].*$"
+syn match  wikidpadUserTag   "\v(todo|done|action|track|issue|question|project):"
 
-highlight link wikidpadBold   Underlined
-highlight link wikidpadItalic Underlined
-highlight link wikidpadEntity SpecialChar
-highlight link wikidpadLink   Identifier
+highlight link wikidpadBold    Underlined
+highlight link wikidpadItalic  Underlined
+highlight link wikidpadEntity  SpecialChar
+highlight link wikidpadLink    Identifier
 highlight link wikidpadHeading Statement
+highlight link wikidpadUserTag Todo
