@@ -5,6 +5,23 @@ function wikidpad#showUserTags(tags)
   :cwindow
 endfunction
 
-function wikidpad#showQuickFix()
-  
+function! wikidpad#openWikiWord()
+  if (!wikidpad#onWikiWord())
+    echom "Not a WikiWord!"
+    return
+  endif
+  if (&modified)
+    echom "Buffer has unsaved changes"
+    return
+  endif
+
+  let word       = expand("<cword>")
+  let linkedFile = word . ".wiki"
+
+  exec "edit " . linkedFile
+  if (!filereadable(linkedFile))
+    execute "normal! ggO++ ".word
+    normal! oG
+    startinsert 
+  endif
 endfunction
