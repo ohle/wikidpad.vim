@@ -20,10 +20,10 @@ endfunction
 
 
 " Mappings for user tag actions
-nnoremap <leader>wt :call wikidpad#showUserTags(['todo','done'])<cr>
-nnoremap <leader>wa :call wikidpad#showUserTags(['action'])<cr>
-nnoremap <leader>wi :call wikidpad#showUserTags(['issue'])<cr>
-nnoremap <leader>wq :call wikidpad#showUserTags(['question'])<cr>
+nnoremap <buffer> <leader>wt :call wikidpad#showUserTags(['todo','done'])<cr>
+nnoremap <buffer> <leader>wa :call wikidpad#showUserTags(['action'])<cr>
+nnoremap <buffer> <leader>wi :call wikidpad#showUserTags(['issue'])<cr>
+nnoremap <buffer> <leader>wq :call wikidpad#showUserTags(['question'])<cr>
 
 "mappings for following links
-nnoremap <leader>ww :call wikidpad#openWikiWord()<cr>
+nnoremap <buffer> <leader>ww :call wikidpad#openWikiWord()<cr>
