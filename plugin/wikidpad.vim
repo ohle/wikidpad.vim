@@ -25,3 +25,11 @@ function! wikidpad#openWikiWord()
     startinsert 
   endif
 endfunction
+
+function! wikidpad#openLink()
+  if (!wikidpad#onLink())
+    echom "Not a Link!"
+    return
+  endif
+  exec "edit " . wikidpad#curlink()
+endfunction
