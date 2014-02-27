@@ -56,3 +56,4 @@ nnoremap <buffer> <leader>wl :call wikidpad#openLink()<cr>
 " Automatic fomrmatting of lists
 setlocal formatlistpat=^\\s*\\([0-9]\\+\\.\\\|\\*\\)\\s\\+
 setlocal formatoptions=tn
+setlocal autoindent
